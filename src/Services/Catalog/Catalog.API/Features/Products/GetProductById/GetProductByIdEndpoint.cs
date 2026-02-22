@@ -18,6 +18,7 @@ public class GetProductByIdEndpoint : ICarterModule
         .WithName("GetProductById")
         .Produces<GetProductByIdResponse>(StatusCodes.Status200OK)
         .ProducesProblem(StatusCodes.Status400BadRequest)
+        .ProducesProblem(StatusCodes.Status404NotFound)
         .WithSummary("Get Product by ID")
         .WithDescription("Get Product by ID");
     }
